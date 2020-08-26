@@ -11,12 +11,15 @@ header {
   align-items: center;
   justify-content: space-between;
   nav{
-      width:50%;
+      width:35%;
   }
   ul {
     display: flex;
     list-style: none;
     justify-content:space-around;
+  }
+  li{
+    font-size:25px;
   }
 }
 

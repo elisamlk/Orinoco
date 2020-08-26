@@ -19,7 +19,7 @@ header {
 }
 
 header nav {
-  width: 50%;
+  width: 35%;
 }
 
 header ul {
@@ -29,6 +29,10 @@ header ul {
   list-style: none;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+header li {
+  font-size: 25px;
 }
 
 footer {
