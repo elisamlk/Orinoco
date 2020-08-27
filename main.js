@@ -19,18 +19,33 @@ function ajaxGet(url, callback) {
 ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
   let cameras = JSON.parse(reponse);
   cameras.forEach(function (cameraList) {
+    let card = document.createElement("div");
+    // Ajout de la classe
+    card.className = "card";
+    productDisplay.appendChild(card);
+    console.log(card);
     let cameraImage = document.createElement("img");
     cameraImage.src = cameraList.imageUrl;
+    card.appendChild(cameraImage);
+    console.log(cameraImage);
+    let cardBody = document.createElement("div");
+    cardBody.className = "card-body";
+    card.appendChild(cardBody);
+    console.log(cardBody);
     let cameraName = document.createElement("h5");
     cameraName.textContent = cameraList.name;
+    cardBody.appendChild(cameraName);
+    console.log(cameraName);
     let cameraPrice = document.createElement("p");
     cameraPrice.textContent = cameraList.price;
+    cardBody.appendChild(cameraPrice);
+    console.log(cameraPrice);
     let cameraDescription = document.createElement("p");
     cameraDescription.textContent = cameraList.description;
-    productDisplay.appendChild(cameraImage);
-    productDisplay.appendChild(cameraName);
-    productDisplay.appendChild(cameraPrice);
-    productDisplay.appendChild(cameraDescription);
+    cardBody.appendChild(cameraDescription);
+    console.log(cameraDescription);
+    
+    
   });
 });
 
@@ -43,6 +58,3 @@ ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
   </div>
 </div>
 */
-
-
-

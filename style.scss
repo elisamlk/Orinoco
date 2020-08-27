@@ -9,7 +9,7 @@ header {
   display: flex;
   height: 125px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   nav{
       width:35%;
   }
@@ -21,6 +21,10 @@ header {
   li{
     font-size:25px;
   }
+}
+
+main{
+  margin-bottom: 200px;
 }
 
 footer {
