@@ -5,26 +5,26 @@ body {
 
 header {
   background-color: #f3ebf3;
-  width:100%;
+  width: 100%;
   display: flex;
   height: 125px;
   align-items: center;
   justify-content: space-around;
-  nav{
-      width:35%;
+  nav {
+    width: 35%;
   }
   ul {
     display: flex;
     list-style: none;
-    justify-content:space-around;
+    justify-content: space-around;
   }
-  li{
-    font-size:25px;
+  li {
+    font-size: 25px;
   }
 }
 
-main{
-  margin-bottom: 200px;
+main {
+  margin: 50px 0 100px 0;
 }
 
 footer {
@@ -36,4 +36,33 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#productDisplay {
+  display: flex;
+  justify-content: space-evenly;
+  .card {
+    flex-basis:15%;
+    box-shadow: 0px 0px 5px 6px #f1f1f1;
+    height: 300px;
+  }
+  img {
+    width: 100%;
+    height: 128.61px;
+  }
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: #f3ebf3;
+  border-radius: 25px;
+  width: 120px;
+  height: 35px;
+  font-size: 15px;
+  border:none;
 }
