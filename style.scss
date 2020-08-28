@@ -42,9 +42,9 @@ footer {
   display: flex;
   justify-content: space-evenly;
   .card {
-    flex-basis:15%;
-    box-shadow: 0px 0px 5px 6px #f1f1f1;
-    height: 300px;
+    flex-basis: 16%;
+    box-shadow: 0px 0px 3px 4px #f1f1f1;
+    height: 350px;
   }
   img {
     width: 100%;
@@ -52,7 +52,7 @@ footer {
   }
 }
 
-.card-body{
+.card-body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,8 +61,14 @@ footer {
 button {
   background-color: #f3ebf3;
   border-radius: 25px;
-  width: 120px;
-  height: 35px;
+  width: 125px;
+  height: 40px;
   font-size: 15px;
-  border:none;
+  border: none;
 }
+
+h5 {
+  font-size: 20px;
+}
+
+
