@@ -1,4 +1,4 @@
-ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
+/*ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
   let cameras = JSON.parse(reponse);
   cameras.forEach(function (cameraList) {
     let card = document.createElement("div");
@@ -27,9 +27,10 @@ ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
     cardBody.appendChild(cameraDescription);
   });
 });
+*/
 
 /*<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+    <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -37,3 +38,38 @@ ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
   </div>
 </div>
 */
+ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
+  let cameras = JSON.parse(reponse);
+  cameras.forEach(function (cameraList) {
+    let card = document.createElement("div");
+    card.className = "card";
+    let cameraImage = document.createElement("img");
+    cameraImage.src = cameraList.imageUrl;
+    let cardBody = document.createElement("div");
+    cardBody.className = "card-body";
+    let cameraName = document.createElement("h5");
+    cameraName.textContent = cameraList.name;
+    let cameraPrice = document.createElement("p");
+    cameraPrice.textContent = cameraList.price / 100 + "€";
+    let cameraDescription = document.createElement("button");
+    cameraDescription.textContent = "Fiche produit";
+    let productDisplay = document.getElementById("productDisplay");
+    //console.log(productDisplay);
+    productDisplay.appendChild(card);
+    //console.log(card);
+    cameraImage.src = cameraList.imageUrl;
+    card.appendChild(cameraImage);
+    //console.log(cameraImage);
+    cardBody.className = "card-body";
+    card.appendChild(cardBody);
+    //console.log(cardBody);
+    cameraName.textContent = cameraList.name;
+    cardBody.appendChild(cameraName);
+    //console.log(cameraName);
+    cameraPrice.textContent = cameraList.price/100 + "€";
+    cardBody.appendChild(cameraPrice);
+    cameraDescription.textContent = "Fiche produit";
+    cardBody.appendChild(cameraDescription);
+    console.log(productDisplay);
+  });
+});
