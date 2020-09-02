@@ -70,6 +70,8 @@ ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
     cardBody.appendChild(cameraPrice);
     cameraDescription.textContent = "Fiche produit";
     cardBody.appendChild(cameraDescription);
-    console.log(productDisplay);
+    
   });
 });
+
+console.log(productDisplay);
