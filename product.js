@@ -7,7 +7,7 @@ ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
 
     let imageDescription = document.createElement("img");
     imageDescription.src = cameraDescription.imageUrl;
-
+    imageDescription.className="imageDescription";
     let bodyDescription = document.createElement("div");
     bodyDescription.className = "bodyDescription";
 
