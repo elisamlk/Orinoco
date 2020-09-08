@@ -1,3 +1,6 @@
+let params = new URLSearchParams (document.location.href.split("?")[1]);
+let url = params.get("id_ourson");
+
 
 
 ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
@@ -6,25 +9,17 @@ ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
     let productDescription = document.getElementById("productDescription");
     let cardDescription = document.createElement("div");
     cardDescription.className = "cardDescription";
-
     let imageDescription = document.createElement("img");
     imageDescription.src = cameraDescription.imageUrl;
-    imageDescription.className="imageDescription";
+    imageDescription.className = "imageDescription";
     let bodyDescription = document.createElement("div");
     bodyDescription.className = "bodyDescription";
-
     let titleDescription = document.createElement("h5");
     titleDescription.className = "titleDescription";
     titleDescription.textContent = cameraDescription.name;
-
     let itemDescription = document.createElement("p");
     itemDescription.className = "itemDescription";
     itemDescription.textContent = cameraDescription.description;
-
-
-    
-    
-    
     productDescription.appendChild(cardDescription);
     cardDescription.appendChild(imageDescription);
     cardDescription.appendChild(bodyDescription);
@@ -34,7 +29,6 @@ ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
 });
 
 console.log(productDescription);
-
 
 /*
 <div class="cardDescription">
@@ -46,3 +40,4 @@ console.log(productDescription);
  </div>
 </div>
 */
+
