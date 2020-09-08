@@ -1,3 +1,5 @@
+
+
 ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
   let cameras = JSON.parse(reponse);
   cameras.forEach(function (cameraDescription) {
