@@ -1,11 +1,46 @@
-let params = new URLSearchParams (document.location.href.split("?")[1]);
-let url = params.get("id_ourson");
+let params = new URLSearchParams(document.location.search);
+let id = params.get("id");
+console.log(id);
+let url = "http://localhost:3000/api/cameras/" + id;
+console.log(url);
+
+ajaxGet(url, function (response) {
+  let cameraDescription = JSON.parse(response);
+  
+  let productDescription = document.getElementById("productDescription");
+  
+  let cardDescription = document.createElement("div");
+  cardDescription.className = "cardDescription";
+  let imageDescription = document.createElement("img");
+  
+  imageDescription.className = "imageDescription";
+  let bodyDescription = document.createElement("div");
+  bodyDescription.className = "bodyDescription";
+  let titleDescription = document.createElement("h5");
+  titleDescription.className = "titleDescription";
+  titleDescription.textContent = cameraDescription.name;
+  let itemDescription = document.createElement("p");
+  let addToCard = document.createElement("button");
+  addToCard.className = "button";
+  addToCard.textContent="Ajouter au panier";
+  itemDescription.className = "itemDescription";
+  itemDescription.textContent = cameraDescription.description;
+  productDescription.appendChild(cardDescription);
+  imageDescription.src = cameraDescription.imageUrl;
+  cardDescription.appendChild(imageDescription);
+  cardDescription.appendChild(bodyDescription);
+  bodyDescription.appendChild(titleDescription);
+  bodyDescription.appendChild(itemDescription);
+  bodyDescription.appendChild(addToCard);
+});
 
 
 
-ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
+/*ajaxGet(url, function (reponse) {
   let cameras = JSON.parse(reponse);
-  cameras.forEach(function (cameraDescription) {
+  cameras(function (cameraDescription) {
+
+    /*
     let productDescription = document.getElementById("productDescription");
     let cardDescription = document.createElement("div");
     cardDescription.className = "cardDescription";
@@ -30,7 +65,7 @@ ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
 
 console.log(productDescription);
 
-/*
+
 <div class="cardDescription">
   <img src="..." class="card-img" alt="...">
   <div class="bodyDescription>
@@ -40,4 +75,3 @@ console.log(productDescription);
  </div>
 </div>
 */
-
