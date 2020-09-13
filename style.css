@@ -129,9 +129,15 @@ h5 {
   margin-bottom: 40px;
   -webkit-box-shadow: 0px 0px 3px 4px #f1f1f1;
           box-shadow: 0px 0px 3px 4px #f1f1f1;
+  border-radius: 20px;
 }
 
 #productDescription .cardDescription .imageDescription {
   width: 350px;
+  border-radius: 20px;
+}
+
+#productDescription .cardDescription .bodyDescription {
+  padding: 0 20px 0 10px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -20,9 +20,6 @@ ajaxGet(url, function (response) {
   titleDescription.className = "titleDescription";
   titleDescription.textContent = cameraDescription.name;
   let itemDescription = document.createElement("p");
-  let addToCard = document.createElement("button");
-  addToCard.className = "button";
-  addToCard.textContent="Ajouter au panier";
   itemDescription.className = "itemDescription";
   itemDescription.textContent = cameraDescription.description;
   productDescription.appendChild(cardDescription);
@@ -31,10 +28,33 @@ ajaxGet(url, function (response) {
   cardDescription.appendChild(bodyDescription);
   bodyDescription.appendChild(titleDescription);
   bodyDescription.appendChild(itemDescription);
-  bodyDescription.appendChild(addToCard);
+  let addToCart = document.createElement("button");
+  addToCart.className = "button";
+  addToCart.id = "addToCart";
+  addToCart.textContent="Ajouter au panier";
+  bodyDescription.appendChild(addToCart);  
+  
+  
+  let buttonAction = document.getElementById("addToCart");
+    buttonAction.addEventListener('click', function(){
+      //localStorage.setItem
+
+      //cart localStorage.getItem
+      console.log("test add to cart");
+    })
 });
 
 
+
+
+/*let cameraList = [ ];
+
+
+document.getElementById('the-box').addEventListener('click', function () {
+  cameraList.push('cameraDescription');
+  console.log(cameraList);
+});
+*/
 
 /*ajaxGet(url, function (reponse) {
   let cameras = JSON.parse(reponse);
