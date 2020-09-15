@@ -140,4 +140,8 @@ h5 {
 #productDescription .cardDescription .bodyDescription {
   padding: 0 20px 0 10px;
 }
+
+#productDescription .cardDescription select {
+  margin-right: 50px;
+}
 /*# sourceMappingURL=style.css.map */

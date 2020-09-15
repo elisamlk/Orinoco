@@ -10,7 +10,7 @@ ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
     let cameraName = document.createElement("h5");
     cameraName.textContent = cameraList.name;
     let cameraPrice = document.createElement("p");
-    cameraPrice.textContent = cameraList.price / 100 + "€";
+    cameraPrice.textContent = cameraList.price / 100 + " €";
     let cameraDescription = document.createElement("a");
     cameraDescription.className = "button";
     cameraDescription.textContent = "Voir l'article";
@@ -28,7 +28,7 @@ ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
     cameraName.textContent = cameraList.name;
     cardBody.appendChild(cameraName);
     //console.log(cameraName);
-    cameraPrice.textContent = cameraList.price / 100 + "€";
+    cameraPrice.textContent = cameraList.price / 100 + " €";
     cardBody.appendChild(cameraPrice);
 
     cardBody.appendChild(cameraDescription);
