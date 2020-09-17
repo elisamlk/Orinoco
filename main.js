@@ -3,6 +3,8 @@ ajaxGet("http://localhost:3000/api/cameras", function (reponse) {
 
   // Boucle pour récupérer la liste des caméras
   cameras.forEach(function (cameraList) {
+
+    // Récupération de l'élément main
     let productDisplay = document.getElementById("productDisplay");
 
     // Création des éléments
