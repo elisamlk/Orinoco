@@ -1,3 +1,4 @@
+// Récupération de l'ID produit
 let params = new URLSearchParams(document.location.search);
 let id = params.get("id");
 console.log(id);
@@ -62,19 +63,29 @@ ajaxGet(url, function (response) {
   addToCart.id = "addToCart";
   addToCart.textContent = "Ajouter au panier";
   bodyDescription.appendChild(addToCart);
-  console.log(productDescription);
 
-  // Ajout des produits dans le panier
+  // Compteur panier
   let buttonAction = document.getElementById("addToCart");
   buttonAction.addEventListener("click", function (cartNumbers) {
     let productNumbers = localStorage.getItem("cartNumbers");
+    let lenseSelect = document.querySelector("select");
+    let lenseChoice = lenseSelect.selectedIndex;
     productNumbers = parseInt(productNumbers);
-    if (productNumbers) {
+    if (lenseChoice == 0 ) {
+      localStorage.setItem("cartNumbers", 0); // Rien ne s'ajoute au compteur panier
+      document.querySelector("span").textContent = 0;
+      alert("Veuillez sélectionner une lentille");
+    } else {
       localStorage.setItem("cartNumbers", productNumbers + 1);
       document.querySelector("span").textContent = productNumbers + 1;
-    } else {
-      localStorage.setItem("cartNumbers", 1);
-      document.querySelector("span").textContent = 1;
+      alert("Votre article a été ajouté au panier");
+      // Ajout des produits dans le panier
+      
+      
     }
   });
+
+  
+
+  
 });
