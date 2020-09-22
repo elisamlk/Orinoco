@@ -30,18 +30,18 @@ header {
 
 #productDisplay {
   margin: 40px 20px 100px 20px;
-}
 
-.card {
-  box-shadow: 0px 0px 3px 4px #f1f1f1;
-  border-radius: 20px;
-  img {
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-  }
-  button{
-    background-color:#f3ebf3;
-    border-radius:20px;
+  .card {
+    box-shadow: 0px 0px 3px 4px #f1f1f1;
+    border-radius: 20px;
+    img {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+    button {
+      background-color: #f3ebf3;
+      border-radius: 20px;
+    }
   }
 }
 
@@ -56,30 +56,12 @@ footer {
   justify-content: center;
 }
 
-
-/*
-
 #productDescription {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .cardDescription {
-    display: flex;
-    width: 70%;
-    margin-bottom: 40px;
-    box-shadow: 0px 0px 3px 4px #f1f1f1;
-    border-radius: 20px;
-    .imageDescription {
-      width: 350px;
-      border-radius: 20px;
-    }
-    .bodyDescription {
-      padding: 0 20px 0 10px;
-    }
-    select {
-      margin-right: 50px;
-    }
+  margin: 20px 70px 0 70px;
+  box-shadow: 0px 0px 3px 4px #f1f1f1;
+  border-radius: 20px;
+  img {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
   }
 }
-*/
