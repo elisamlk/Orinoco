@@ -92,6 +92,7 @@ ajaxGet(url, function (response) {
       let addToCart = JSON.stringify(cameraInCart);
       localStorage.setItem(cameraDescription._id, addToCart);
       alert("Votre article a été ajouté au panier");
+      console.log("Cet article a été ajouté" + "" + addToCart);
       
     }
   });
